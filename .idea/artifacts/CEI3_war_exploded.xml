@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="CEI3:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/CEI3_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="CEI3/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="CEI3" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
