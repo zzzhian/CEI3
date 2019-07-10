@@ -20,8 +20,8 @@ public class ToPageServlet extends HttpServlet {
                 goToLoginPage( request,  response);
 
 
-             default:
-                 System.out.println("op没有对应值");
+            default:
+                System.out.println("op没有对应值");
         }
 
     }

@@ -23,9 +23,8 @@ public class AdminServlet extends HttpServlet {
         if ("Register".equals(op)){
             Register(request,response);
         }else if("goToLoginPage".equals(op)){
-            goToLoginPage(request,response);
-        }
-        else if("Login".equals(op)){
+            goTologinPage(request,response);
+        } else if("Login".equals(op)){
             Login(request,response);
         }else if("Logout".equals(op)) {
             Logout(request, response);
@@ -38,8 +37,8 @@ public class AdminServlet extends HttpServlet {
 
     }
 
-    private void goToLoginPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/login.jsp").forward(request,response);
+    private void goTologinPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/admin/index.jsp").forward(request,response);
     }
 
 
@@ -52,7 +51,7 @@ public class AdminServlet extends HttpServlet {
         HttpSession session = request.getSession();
 
         session.removeAttribute("USER_SESSION");
-        request.getRequestDispatcher("/index.jsp").forward(request,response);
+        request.getRequestDispatcher("/admin/index.jsp").forward(request,response);
     }
 
     /**
@@ -73,10 +72,10 @@ public class AdminServlet extends HttpServlet {
         if(a!= null){
             HttpSession session = request.getSession();
             session.setAttribute("USER_SESSION",a);// USER_SESSION 是一个记号|标记
-            request.getRequestDispatcher("/login.jsp").forward(request,response);
+            request.getRequestDispatcher("/index.jsp").forward(request,response);
         }else{
             request.setAttribute("msg","用户登录失败");
-            request.getRequestDispatcher("/error.jsp").forward(request,response);
+            request.getRequestDispatcher("/admin/error.jsp").forward(request,response);
         }
     }
     /**
@@ -106,14 +105,14 @@ public class AdminServlet extends HttpServlet {
         if (row > 0) {
             request.setAttribute("msg", "注册成功！");
             try {
-                request.getRequestDispatcher("/success.jsp").forward(request, response);
+                request.getRequestDispatcher("/admin/success.jsp").forward(request, response);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
         }else{
             request.setAttribute("msg", "注册失败！");
             try {
-                request.getRequestDispatcher("/error.jsp").forward(request,
+                request.getRequestDispatcher("/admin/error.jsp").forward(request,
                         response);
             } catch (Exception e) {
                 throw new RuntimeException(e);

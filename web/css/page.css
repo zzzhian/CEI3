@@ -1,0 +1,99 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+.left {
+	width:25%;
+	height: 100%;
+   overflow: hidden;
+	float: left;
+	background:mediumpurple ;
+}
+
+.top {
+	width: 75%;
+	float: right;
+	height: 114px;
+	line-height: 100px;
+	border-bottom: 1px solid #b0cdff;
+}
+
+.content {
+	float: right;
+	width: 75%;
+	text-align: center;
+	font-size: 40px;
+	margin-top: 200px;
+}
+.leftTiyle {
+	font-family: 微软雅黑;
+	font-size: 40px;
+	padding-left: 30px;
+	font-weight: 600;
+	color: #545454;
+	float: left;
+}
+
+.thisUser {
+	float: right;
+	margin-right: 30px;
+}
+
+.bigTitle {
+	background:url("../img/logo.jpg");
+
+	height:114px;
+
+
+}
+
+.lines .active {
+	color: blue;
+}
+.lines .active1 {
+	color: blue;
+}
+.lines .active2{
+	color: blue;
+}
+.lines .active3{
+	color: blue;
+}
+.lines .active4{
+	color: blue;
+}
+.lines .active:hover{
+	color: white;
+}
+.lines .active1:hover {
+	color: white;
+}
+.lines .active2:hover{
+	color: white;
+}
+.lines .active3:hover{
+	color: white;
+}
+.lines .active4:hover{
+	color: white;
+}
+
+.lines .active .hidden{
+color: red;
+}
+
+.lines img{
+    width: 23px;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    margin-right: 9px;
+}
+.lines div {
+	line-height: 70px;
+	padding-left: 50px;
+}
+
+.lines div:hover {
+	cursor: pointer;
+}
